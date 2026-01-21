@@ -1,13 +1,13 @@
 
-# M3 Telematics System — Minimal, Scalable Design
+# Telematics System — Minimal, Scalable Design
 
 ## 1. Goal
 
-Design a **simple, robust telematics pipeline** for the BMW E46 M3 that:
+Design a **simple, robust telematics pipeline** for the a car that:
 
 - Runs **without iOS apps or Apple developer accounts**
 - Buffers data locally on a **Raspberry Pi (Debian)** using SQLite
-- Writes data **directly to a TimescaleDB hypertable** on Phoenix over VPN
+- Writes data **directly to a TimescaleDB hypertable** on a remote server over VPN
 - Scales cleanly from *hello‑world* to *years of telemetry*
 - Can be incrementally extended without rewrites
 
@@ -27,7 +27,7 @@ Raspberry Pi (Debian)
         |
         |  (VPN / Tailscale)
         v
-Phoenix
+Remote Server
 - PostgreSQL + TimescaleDB
 - Hypertable for samples
 - Retention + compression
